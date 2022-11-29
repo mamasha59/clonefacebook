@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: 'Roboto', sans-serif;
+    }
+  }
+
+@layer components {
+/* header */
+  .input-style{
+    @apply w-[100%] rounded-3xl py-2 pl-3 
+           pr-5 text-base outline-0 bg-[#f0f2f5]
+           xl:hidden
+  }
+
+  .arrow-back{
+    @apply p-0 flex items-center justify-center 
+            w-[inherit] h-[inherit] rounded-3xl
+            hover:bg-[#d8dadff3]  cursor-pointer;
+  }
+  .img-style{ /*repated style */
+    @apply text-3xl text-[#65676b]
+  }
+
+  .common-links{ /*common stykes for central links */
+    @apply ml-2 py-[10px] hover:cursor-pointer hover:bg-[#cccfd5]
+    flex justify-center xl:px-5 flex-col items-center relative rounded-[5px]
+  }
+  .common-links-hover{
+   @apply group-hover:text-[blue]
+  }
+  .links-middle{ /*---styles of middle-links block */
+    @apply px-12
+  } 
+ 
+  .links-style-right{  /*---styles of right-links block*/
+    @apply ml-2 p-[10px] bg-[#e4e6eb] rounded-full
+            flex justify-center relative hover:cursor-pointer hover:bg-[#d4d5d8]
+  }
+
+  .caption-style{   /*---clue styles*/
+    @apply absolute bottom-[-40px]
+           px-[6px] py-[5px] bg-[#686161]
+           text-sm text-[#fff] rounded-md invisible
+           group-hover:visible
+  }
+  .links-rightcolor{
+    @apply text-2xl  text-[#000]
+  }
+
+  /* ----------------- */
+  
+}
