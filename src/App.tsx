@@ -5,7 +5,7 @@ import LeftSideBar from "./components/LeftSideBar/LeftSideBar";
 
 function App() {
   return (
-     <body className="w-auto mx-auto my-0 bg-[#f0f2f5]">
+     <div className="w-auto mx-auto my-0 bg-[#f0f2f5] tw-h-full">
       {/* header */}
       <Header/>
       <main className="flex justify-between mt-7 px-4">
@@ -16,7 +16,7 @@ function App() {
       {/* contacts-section */}
       <RightSideBar/>
       </main>
-     </body>
+     </div>
   );
 }
 

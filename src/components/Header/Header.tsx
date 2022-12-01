@@ -41,23 +41,23 @@ const Header:React.FC = () => {
         <nav className="flex-[1_1_60%] flex items-center justify-center">
 
             <ul className="flex py-1">
-                <li className="common-links links-middle group">
+                <li className="common-links common-hover links-middle group">
                     <TbHome2 className="img-style common-links-hover"/>
                     <span className="caption-style">Home</span>
                 </li>
-                <li className="common-links links-middle group">
+                <li className="common-links common-hover links-middle group">
                     <TbUsers className="img-style common-links-hover"/>
                     <span className="caption-style">Friends</span>
                 </li>
-                <li className="common-links links-middle group">
+                <li className="common-links common-hover links-middle group">
                     <TbMovie className="img-style common-links-hover"/>
                     <span className="caption-style">Watch</span>
                 </li>
-                <li className="common-links links-middle group">
+                <li className="common-links common-hover links-middle group">
                     <TbBuildingStore className="img-style common-links-hover"/>
                     <span className="caption-style">Markeplace</span>
                 </li> 
-                <li className="common-links links-middle group">
+                <li className="common-links common-hover links-middle group">
                     <TbDeviceGamepad2 className="img-style common-links-hover"/>
                     <span className="caption-style">Games</span>
                 </li> 

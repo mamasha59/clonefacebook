@@ -25,8 +25,8 @@
     @apply text-3xl text-[#65676b]
   }
 
-  .common-links{ /*common stykes for central links */
-    @apply ml-2 py-[10px] hover:cursor-pointer hover:bg-[#cccfd5]
+  .common-links{ /*common styles for central links */
+    @apply ml-2 py-[10px] hover:cursor-pointer
     flex justify-center xl:px-5 flex-col items-center relative rounded-[5px]
   }
   .common-links-hover{
@@ -52,5 +52,15 @@
   }
 
   /* ----------------- */
-  
+  .common-hover{
+    @apply hover:bg-[#e0e3e9] cursor-pointer
+  }
+  .make-tweet{
+    @apply rounded-[50px] bg-[#f0f2f5] w-[100%] px-4 py-2
+    text-[#707276] text-lg tracking-wide font-normal 
+    flex items-center cursor-pointer
+  }
+  .border-style{
+    @apply border-solid border-b-[1px] border-[#e5dfdf]
+  }
 }

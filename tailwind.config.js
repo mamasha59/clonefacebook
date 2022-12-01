@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors:{
+        'hoverColor':'#43ff64d9',
+        'black-rgba':'rgba(0,0,0,0.2)'
+        
+      }
     },
     screens:{
       'xl': {'max': '1279px'},
@@ -21,10 +26,6 @@ module.exports = {
       'sm': {'max': '639px'},
       // => @media (max-width: 639px)
     },
-    colors:{
-      'hoverColor':'#43ff64d9',
-      
-    }
   },
   plugins: [],
 }

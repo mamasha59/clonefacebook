@@ -8,7 +8,7 @@ interface LinkProps {
  
 const Link:React.FC<LinkProps> = ({linkName,Icon, img}) => {
     return ( 
-    <li className="flex items-center py-3 px-1 mr-1 hover:bg-[#cccfd5] rounded-md cursor-pointer">
+    <li className="flex items-center py-3 px-1 mr-1 common-hover rounded-md cursor-pointer">
         <a href="/#" className="flex items-center">
             <div className="text-3xl w-8 h-8">
                 {img &&  <img src={img} alt="profile img"/>}
