@@ -63,4 +63,7 @@
   .border-style{
     @apply border-solid border-b-[1px] border-[#e5dfdf]
   }
+  .common-button-style{
+    @apply max-w-[172px] flex items-center common-hover font-medium grow justify-center text-base rounded-lg py-2 text-[#65676b]
+  }
 }

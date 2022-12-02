@@ -14,7 +14,7 @@ interface LeftSideBarSideBarProps {
  
 const LeftSideBar:React.FC<LeftSideBarSideBarProps> = () => {
     return (
-    <section className="max-w-[360px] my-1 overflow-y-auto grow">
+    <section className="max-w-[360px] overflow-y-auto grow fixed left-[15px] w-[100%]">
         <ul>
         <Link linkName="User" Icon={TbUser}/>
         <Link linkName="Поиск друзей" Icon={ImUsers}/>
