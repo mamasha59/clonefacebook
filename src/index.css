@@ -11,7 +11,7 @@
 @layer components {
 /* header */
   .input-style{
-    @apply w-[100%] rounded-3xl py-2 pl-3 
+    @apply max-w-[100%] rounded-3xl py-2 pl-3 
            pr-5 text-base outline-0 bg-[#f0f2f5]
            xl:hidden
   }
@@ -33,7 +33,7 @@
    @apply group-hover:text-[blue]
   }
   .links-middle{ /*---styles of middle-links block */
-    @apply px-12
+    @apply px-12 lg:px-5
   } 
  
   .links-style-right{  /*---styles of right-links block*/
@@ -65,5 +65,8 @@
   }
   .common-button-style{
     @apply max-w-[172px] flex items-center common-hover font-medium grow justify-center text-base rounded-lg py-2 text-[#65676b]
+  }
+  .small-screen{
+    @apply sm:hidden
   }
 }

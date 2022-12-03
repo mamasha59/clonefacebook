@@ -11,7 +11,7 @@ interface RightSideBarProps {
 const RightSideBar:React.FC<RightSideBarProps> = () => {
 
     return (
-        <section className="max-w-[360px] my-1 overflow-y-auto grow fixed right-0 w-[100%] overflow-x-hidden">
+        <section className="max-w-[360px] max-h-[560px] top-[82px] sticky grow overflow-y-auto my-1 w-[100%] overflow-x-hidden md:hidden">
             <div className="flex justify-between">
                 <h2 className="text-[#65676B] pl-[6px] font-bold">Contacts</h2>
                 <ul className="flex">

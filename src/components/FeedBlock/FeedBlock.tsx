@@ -35,16 +35,16 @@ const FeedBock:React.FC<FeedBockProps> = ({user,userImg}) => {
     },[])
 
     return ( 
-    <div className="bg-[#fff] my-7 rounded-md px-4 py-3">
+    <div className="bg-[#fff] mt-7 rounded-md px-4 py-3">
         <div className="flex border-style pb-4">
             <img className="links-style-right mr-2 w-11 h-11 text-xs" src={userImg} alt="user's"/>
             <div onClick={()=>setopen(true)} className="make-tweet">What's new, {user}?</div>
         </div>
         <div className="mt-3">
             <ul className="flex justify-between w-[100%]">
-                <li className="common-button-style"><RiLiveLine className="text-[#EA2027] text-2xl mr-2"/>Live</li>
-                <li className="common-button-style"><FcStackOfPhotos className="text-2xl mr-2"/>Photo/video</li>
-                <li className="common-button-style"><VscSmiley className="text-[#FFC312] text-2xl mr-2"/>Feeling/activity</li>
+                <li className="common-button-style"><RiLiveLine className="text-[#EA2027] text-2xl mr-2  sm:text-xl"/>Live</li>
+                <li className="common-button-style"><FcStackOfPhotos className="text-2xl mr-2 sm:text-xl"/>Photo/video</li>
+                <li className="common-button-style"><VscSmiley className="text-[#FFC312] text-2xl mr-2 sm:text-xl"/>Feeling/activity</li>
             </ul>
         </div>
         {/* popup make tweet */}

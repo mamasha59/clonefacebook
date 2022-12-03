@@ -8,7 +8,7 @@ function App() {
      <div className="w-auto mx-auto my-0 bg-[#f0f2f5] tw-h-full">
       {/* header */}
       <Header/>
-      <main className="flex justify-between mt-7 px-4">
+      <main className="flex justify-between mt-6 px-4 md:justify-center">
       {/* right-section */}
       <LeftSideBar/>
       {/* center-main section */}

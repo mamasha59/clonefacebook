@@ -13,7 +13,7 @@ interface FeedProps {
  
 const Feed:React.FC<FeedProps> = ({userImg,user}) => {
     return (
-    <div className="bg-[#fff] rounded-md px-4 py-3 flex flex-col">
+    <div className="bg-[#fff] rounded-md px-4 py-3 flex flex-col my-7">
       <div className="flex relative mb-3">
            <div className="mr-2 w-11 h-11"><img className="links-style-right text-xs m-0" src={userImg} alt="user's"/></div>
             <div className="flex flex-col">
