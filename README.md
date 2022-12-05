@@ -3,9 +3,9 @@
 + firebase log-in
 + tailwind
 + react hooks
-
++ typescript
 ```
-
+### https://clonefacebook-psi.vercel.app/ ###
 To do:
 ```
 make search input popup --- bags on the small screen
@@ -14,7 +14,7 @@ make search input popup --- bags on the small screen
 ~~log-in~~ ---- done
 > react routers ----- for future
 fix design bags ---- in process
-
+the main problem its conflict typescript with firebase, this is why i renamed file back to Js
 ```
 
 
