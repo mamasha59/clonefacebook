@@ -11,7 +11,7 @@ const Link:React.FC<LinkProps> = ({linkName,Icon, img}) => {
     <li className="flex items-center py-3 px-1 mr-1 common-hover rounded-md cursor-pointer">
         <a href="/#" className="flex items-center">
             <div className="text-3xl w-8 h-8">
-                {img &&  <img src={img} alt="profile img"/>}
+                {img &&  <img className="links-rightcolor" src={img} alt="profile img"/>}
                 {Icon && <Icon/>}
             </div>
             <h3 className="text-base font-medium ml-3 opacity-75">{linkName}</h3>

@@ -13,7 +13,7 @@
   .input-style{
     @apply max-w-[100%] rounded-3xl py-2 pl-3 
            pr-5 text-base outline-0 bg-[#f0f2f5]
-           xl:hidden
+           xl:invisible
   }
 
   .arrow-back{
@@ -37,7 +37,7 @@
   } 
  
   .links-style-right{  /*---styles of right-links block*/
-    @apply ml-2 p-[10px] bg-[#e4e6eb] rounded-full
+    @apply ml-2 bg-[#e4e6eb] rounded-full w-[44px] h-[44px] items-center
             flex justify-center relative hover:cursor-pointer hover:bg-[#d4d5d8]
   }
 
@@ -48,7 +48,7 @@
            group-hover:visible
   }
   .links-rightcolor{
-    @apply text-2xl  text-[#000]
+    @apply text-2xl  text-[#000] rounded-full
   }
 
   /* ----------------- */

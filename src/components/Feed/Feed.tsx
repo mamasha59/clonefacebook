@@ -9,22 +9,25 @@ import {BiCommentDetail} from 'react-icons/bi';
 interface FeedProps {
     userImg:string;
     user:string;
+    img:string;
+    message:string;
+    time:any;
 }
  
-const Feed:React.FC<FeedProps> = ({userImg,user}) => {
+const Feed:React.FC<FeedProps> = ({userImg,user,img,message,time}) => {
     return (
     <div className="bg-[#fff] rounded-md px-4 py-3 flex flex-col my-7">
       <div className="flex relative mb-3">
            <div className="mr-2 w-11 h-11"><img className="links-style-right text-xs m-0" src={userImg} alt="user's"/></div>
             <div className="flex flex-col">
                 <h5 className="capitalize font-medium">{user}</h5>
-                <time className="flex rounded-md text-sm font-thin items-center">1d <IoEarthOutline className="ml-1"/></time>
+                <p className="flex rounded-md text-sm font-thin items-center">{new Date(time?.toDate()).toUTCString()}<IoEarthOutline className="ml-1"/></p>
                 <div className="p-2 absolute right-2 top-0 common-hover rounded-full"><MdMoreHoriz className="text-[#65676b] text-2xl"/></div>
             </div>
       </div>
       <div className="mb-3">
-        <h6 className="min-w-full mb-3"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde vitae repudiandae distinctio, sapiente rem laudantium, commodi necessitatibus provident magnam iure expedita neque dolorum totam ipsam. Delectus neque culpa omnis voluptates.</h6>
-        <img src="https://t4.ftcdn.net/jpg/01/25/40/65/360_F_125406503_CyVp5BMz4IUHcYqiTk4o01HKVNN1bVHd.jpg" alt="capture" />
+        <h6 className="min-w-full mb-3">{message}</h6>
+        <img src={img} alt="capture" />
       </div>
       <div className="flex justify-between border-style py-[10px]">
         <div className="flex items-center">

@@ -6,22 +6,35 @@ import { VscSmiley } from "react-icons/vsc";
 import { IoMdClose } from "react-icons/io";
 import { IoEarthOutline } from "react-icons/io5";
 import { GoArrowSmallDown } from "react-icons/go";
+import { useStateValue } from "../../Context/StateProvider";
 
+import db from '../../firebase';
+import firebase from 'firebase/compat/app';
 
 interface FeedBockProps {
-    user:string;
-    userImg:string;
+
 }
  
-const FeedBock:React.FC<FeedBockProps> = ({user,userImg}) => {
+const FeedBock:React.FC<FeedBockProps> = () => {
 
+    const [{user},dispatch] = useStateValue();
+    
     const [open, setopen] = React.useState(false);
-    const [tweet, setTweet] = React.useState('');
+    const [tweet, setTweet] = React.useState(''); //data of tweet
+    const [img, setImg] = React.useState(''); //data of tweet
 
    function submitTweet(e:any) {
     e.preventDefault();
-  
+
+    db.collection('posts').add({
+        message:tweet,
+        timeStamp:firebase.firestore.FieldValue.serverTimestamp(),
+        profilePic:user.photoURL,
+        userName:user.displayName,
+        img:img,
+    })
     setTweet('')
+    setImg('')
    }
 
    React.useEffect(() => { //close popup by Escape
@@ -37,8 +50,8 @@ const FeedBock:React.FC<FeedBockProps> = ({user,userImg}) => {
     return ( 
     <div className="bg-[#fff] mt-7 rounded-md px-4 py-3">
         <div className="flex border-style pb-4">
-            <img className="links-style-right mr-2 w-11 h-11 text-xs" src={userImg} alt="user's"/>
-            <div onClick={()=>setopen(true)} className="make-tweet">What's new, {user}?</div>
+            <img className="links-style-right mr-2 w-11 h-11 text-xs" src={user.photoURL} alt="user's"/>
+            <div onClick={()=>setopen(true)} className="make-tweet">What's new, {user.displayName}?</div>
         </div>
         <div className="mt-3">
             <ul className="flex justify-between w-[100%]">
@@ -56,15 +69,16 @@ const FeedBock:React.FC<FeedBockProps> = ({user,userImg}) => {
             </div>
             <form onSubmit={submitTweet} className="p-3">
                 <div className="flex items-center">
-                    <img className="links-style-right mr-2 w-11 h-11 text-xs" src={userImg} alt="user's"/>
+                    <img className="links-style-right mr-2 w-11 h-11 text-xs" src={user.photoURL} alt="user's"/>
                     <div>
-                        <p className="capitalize font-medium">{user}</p>
+                        <p className="capitalize font-medium">{user.displayName}</p>
                         <button className="bg-[#e4e6eb] rounded-md px-1 text-sm font-thin flex items-center"><IoEarthOutline className="mr-1"/>Who can see <GoArrowSmallDown className="text-lg"/></button>
                     </div>
                 </div>
-                <textarea value={tweet} onChange={(e)=>{setTweet(e.target.value)}} className="py-10 outline-0 h-auto w-[100%]" name="" id="" placeholder={`What's new, ${user}?`}/>
+                <textarea value={tweet} onChange={(e)=>{setTweet(e.target.value)}} className="py-10 outline-0 h-auto w-[100%]" name="" id="" placeholder={`What's new, ${user.displayName}?`}/>
+                <input value={img} onChange={(e)=>{setImg(e.target.value)}} type="text" placeholder="URl img"/>
                 <div className="mt-4">
-                    <button onClick={()=>setopen(false)} className="flex items-center justify-center w-[100%] bg-[#1b74e4] rounded-md py-2 text-center text-[#fff]">tweet</button>
+                    <button disabled={tweet.length === 0 && true} onClick={()=>setopen(false)} className={`${tweet.length === 0 && 'cursor-not-allowed bg-[grey]'} flex items-center justify-center w-[100%] bg-[#1b74e4] rounded-md py-2 text-center text-[#fff]`}>tweet</button>
                 </div>
             </form>
         </div>

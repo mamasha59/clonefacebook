@@ -7,16 +7,19 @@ import { HiUserGroup } from "react-icons/hi";
 import { GiBackwardTime } from "react-icons/gi";
 import {  TbUser } from "react-icons/tb";
 import {  MdWeb } from "react-icons/md";
+import { useStateValue } from "../../Context/StateProvider";
 
 interface LeftSideBarSideBarProps {
     
 }
  
 const LeftSideBar:React.FC<LeftSideBarSideBarProps> = () => {
+    const [{user},dispatch] = useStateValue();
+    
     return (
     <section className="max-w-[360px] max-h-[560px] top-[82px] sticky overflow-y-auto grow w-[100%] lg:hidden">
         <ul>
-        <Link linkName="User" Icon={TbUser}/>
+        <Link linkName={user.displayName} img={user.photoURL}/>
         <Link linkName="Поиск друзей" Icon={ImUsers}/>
         <Link linkName="Группы" Icon={HiUserGroup}/>
         <Link linkName="Marketplace" Icon={FcShop}/>
