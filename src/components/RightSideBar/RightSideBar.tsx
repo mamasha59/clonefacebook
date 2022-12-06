@@ -15,22 +15,22 @@ const RightSideBar:React.FC<RightSideBarProps> = () => {
             <div className="flex justify-between">
                 <h2 className="text-[#65676B] pl-[6px] font-bold">Contacts</h2>
                 <ul className="flex">
-                    <li className="">
+                    <li>
                         <MdVideoCall className="text-xl text-[#65676b] mr-5"/>
                         <span className="caption-style">New room</span>
                     </li>
-                    <li className="">
+                    <li>
                         <AiOutlineSearch className="text-xl text-[#65676b] mr-5"/>
                         <span className="caption-style">Search by name or group</span>
                     </li>
-                    <li className="">
+                    <li>
                         <MdMoreHoriz className="text-xl text-[#65676b]"/>
                         <span className="caption-style">Parametrs</span>
                     </li>
                 </ul>
             </div>
 
-            <Link linkName="Sasha Tikhonov" img={'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'} /> 
+            <Link linkName="Sasha Tikhonov" img={'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'} />
         </section>
      );
 }
