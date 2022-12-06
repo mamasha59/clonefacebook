@@ -18,3 +18,4 @@ the main problem its conflict typescript with firebase, this is why i renamed fi
 ```
 
 
+![Видео без названия](https://user-images.githubusercontent.com/68348736/205870143-4c4375f4-1633-498c-9f00-a15e54b3f847.gif)
